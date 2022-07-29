@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+.card_holder {
+  margin: 5.5rem 2rem 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.img_holder {
+  flex: 1 1 14.563rem;
+  position: relative;
+  width: 14.563rem;
+  height: 20.813rem;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 14.563rem;
+  height: 20.813rem;
+  backface-visibility: hidden;
+}
+
+.front img,
+.back img {
+  width: 14.563rem;
+  height: 20.813rem;
+  cursor: pointer;
+}
+
+.front {
+  transform: perspective(56.25rem) rotateY(180deg);
+}
+
+.button_holder {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.button_holder button {
+  width: 15.62rem;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  background: hsl(177deg, 70%, 61%);
+  color: hsl(120deg, 100%, 15%);
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: 0.27s;
+}
+.button_holder button:hover {
+  background: hsl(177deg, 70%, 41%);
+}
+.button_holder button:active {
+  color: rgb(255, 0, 208);
+}
+
+.selected {
+  top: 3.12rem;
+  filter: drop-shadow(6px 6px 3px green);
+}
